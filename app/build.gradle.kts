@@ -1,7 +1,8 @@
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id("com.android.application")
+   // id("com.android.application")
     id("com.google.gms.google-services")
 }
 
@@ -57,6 +58,9 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
 
 
+    //para mensajes push
+    implementation(libs.firebase.messaging.ktx)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -65,6 +69,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
